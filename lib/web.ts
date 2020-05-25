@@ -30,6 +30,10 @@ export const webWorkload = ({
         name: "super-sidecar",
         image: "myorg/sidecar:v1.0.0",
       }),
+      K.overContainer(
+        name,
+        R.pipe(K.setReadinessProbe(), K.setLivenessProbe()),
+      ),
     )(
       K.deploymentWithContainer({
         name,

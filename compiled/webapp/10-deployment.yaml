@@ -21,6 +21,14 @@ spec:
           env:
             - name: FOO
               value: bar
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /
         - name: super-sidecar
           image: 'myorg/sidecar:v1.0.0'
   strategy:

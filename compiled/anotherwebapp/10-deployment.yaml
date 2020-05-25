@@ -19,6 +19,14 @@ spec:
           ports:
             - containerPort: 3000
           env: []
+          readinessProbe:
+            httpGet:
+              port: 3000
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 3000
+              path: /
         - name: super-sidecar
           image: 'myorg/sidecar:v1.0.0'
   strategy:
