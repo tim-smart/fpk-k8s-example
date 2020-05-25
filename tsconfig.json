@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["ESNext"],
-    "strict": true
+    "strict": true,
+    "module": "CommonJS"
   },
   "include": ["contexts/**/*", "lib/**/*", "src/**/*"]
 }
