@@ -26,6 +26,10 @@ export const webWorkload = ({
         maxSurge: "25%",
         maxUnavailable: 2,
       }),
+      K.appendContainer({
+        name: "super-sidecar",
+        image: "myorg/sidecar:v1.0.0",
+      }),
     )(
       K.deploymentWithContainer({
         name,

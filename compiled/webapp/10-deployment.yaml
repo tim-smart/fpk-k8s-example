@@ -23,6 +23,8 @@ spec:
           env:
             - name: FOO
               value: bar
+        - name: super-sidecar
+          image: 'myorg/sidecar:v1.0.0'
   strategy:
     type: RollingUpdate
     rollingUpdate:
