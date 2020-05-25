@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: another-web-app
-  labels:
-    app: another-web-app
   namespace: another-web-app
 spec:
   replicas: 5
