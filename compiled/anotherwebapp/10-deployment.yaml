@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: another-web-app
+  labels:
+    app: another-web-app
+  namespace: another-web-app
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: another-web-app
+  template:
+    metadata:
+      labels:
+        app: another-web-app
+    spec:
+      containers:
+        - name: another-web-app
+          image: 'myorg/another-web-app:latest'
+          ports:
+            - containerPort: 3000
+          env: []
+        - name: super-sidecar
+          image: 'myorg/sidecar:v1.0.0'
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 2

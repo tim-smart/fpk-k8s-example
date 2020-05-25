@@ -1,14 +1,16 @@
 import { webWorkload } from "../lib/web";
+import { TDefaultContext } from "../contexts/default";
 
-export default webWorkload({
-  name: "mywebapp",
-  replicas: 10,
+export default ({ webapp: { replicas, host } }: TDefaultContext) =>
+  webWorkload({
+    name: "mywebapp",
+    replicas,
 
-  image: "myorg/myappimage:latest",
-  containerPort: 8080,
-  env: {
-    FOO: "bar",
-  },
+    image: "myorg/myappimage:latest",
+    containerPort: 8080,
+    env: {
+      FOO: "bar",
+    },
 
-  host: "mywebapp.example.com",
-});
+    host,
+  });
