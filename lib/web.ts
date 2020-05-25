@@ -1,4 +1,5 @@
 import * as K from "@fpk/k8s";
+import * as R from "ramda";
 
 export interface IWebWorkloadOpts {
   name: string;
@@ -20,13 +21,20 @@ export const webWorkload = ({
   host,
 }: IWebWorkloadOpts) =>
   K.withNamespace(name)({
-    "10-deployment": K.deploymentWithContainer({
-      name,
-      image,
-      replicas,
-      containerPort,
-      env,
-    }),
+    "10-deployment": R.pipe(
+      K.setDeploymentRollingUpdate({
+        maxSurge: "25%",
+        maxUnavailable: 2,
+      }),
+    )(
+      K.deploymentWithContainer({
+        name,
+        image,
+        replicas,
+        containerPort,
+        env,
+      }),
+    ),
 
     "10-service": K.serviceWithPort(name, { app: name }, containerPort),
 

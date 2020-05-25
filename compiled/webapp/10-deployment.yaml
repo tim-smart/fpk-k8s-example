@@ -23,3 +23,8 @@ spec:
           env:
             - name: FOO
               value: bar
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 2
