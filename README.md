@@ -6,10 +6,10 @@ An example project that generates Kubernetes config using @fpk/cli and @fpk/k8s.
 
 Clone this repo then:
 
-`yarn install`
+```
+$ yarn install
+$ yarn watch
+```
 
-Make some changes in `src/`. Then run:
-
-`yarn build`
-
-`git diff` will show you the changes!
+Make some changes in `src/`. The file watcher will rebuild the configuration as
+you make changes!

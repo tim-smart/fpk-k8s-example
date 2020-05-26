@@ -5,7 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "fpk -d src -o compiled -c contexts/default.ts"
+    "build": "fpk -d src -o compiled -c contexts/default.ts",
+    "watch": "fpk -d src -o compiled -c contexts/default.ts -w"
   },
   "dependencies": {
     "@fpk/cli": "^0.1.3",
