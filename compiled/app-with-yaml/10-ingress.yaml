@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: app-with-yaml
+  annotations:
+    kubernetes.io/tls-acme: 'true'
+    ingress.kubernetes.io/force-ssl-redirect: 'true'
+  namespace: app-with-yaml
+spec:
+  rules:
+    - host: yaml.example.com
+      http:
+        paths:
+          - backend:
+              serviceName: app-with-yaml
+              servicePort: 3000
+  tls:
+    - hosts:
+        - yaml.example.com
+      secretName: app-with-yaml-tls

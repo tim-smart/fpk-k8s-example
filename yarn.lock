@@ -3,11 +3,11 @@
 
 
 "@fpk/cli@^0.1.3":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.8.tgz#7a0ce4dcccfa17a5e97bcc246668583dbc5650b4"
-  integrity sha512-Alg38jTVhn8N7Jzd3ACFieIBBVyZ+tu1Tn8zM5bkka0EyrnvHJ1hYycruu4yz57KQYYucM361rjnJYdpd3AKvQ==
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.9.tgz#752ad55c82c3c1ab6b63ec998ba3353ef1b191d6"
+  integrity sha512-KcookzxbYXdAuFvxDyCVqDo6+oGeGJGOLSBNpxydkPyQTIxABoYIFkPJ61cwwCzYbYaeGJRv8cOaOebwp+fM5g==
   dependencies:
-    "@fpk/core" "^0.1.6"
+    "@fpk/core" "^0.1.7"
     "@oclif/command" "^1"
     "@oclif/config" "^1"
     "@oclif/plugin-help" "^2"
@@ -18,10 +18,10 @@
     tslib "^1"
     typescript "^3.3"
 
-"@fpk/core@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.6.tgz#e0dd43eec2ac619a1fcfbcbee9d7c374914cfa4c"
-  integrity sha512-jVIE/oTGT3STYXQgPQmpxXyqKRjtSMv9IBgQUue+aKggAuH9kPGc3huHLG6821HTjnXvpRoNKNb9toB2F46Zdw==
+"@fpk/core@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.7.tgz#9d4fe250c7124c1620780d7611dce64b561f9691"
+  integrity sha512-Rvlteogvjl9EMI8/ulOVJye1E5cjpPo558AOXVVyJHfg9vHem/YCdw5ZIEk79lC9DJe2O8VC2TiewXSdL9qdQQ==
   dependencies:
     fs-tree-diff "^2.0.1"
     js-yaml "^3.14.0"
@@ -29,11 +29,11 @@
     rxjs "^6.5.5"
 
 "@fpk/k8s@^0.1.1":
-  version "0.1.14"
-  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.1.14.tgz#d04c81c30b2d361c3d9f278d3e440188595174b8"
-  integrity sha512-NkB53epXrMLLJtMZ2DE+2Jrn62x+NeiVagtqB4evovv6Y1VaLOCY8bvP1QEaJpxnaUYv1wGs276E6mHOUznLKQ==
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.1.15.tgz#0315d527329cfdf094b96d3e1b65c97ed34c963f"
+  integrity sha512-9zvkxgE/zSdvQXQfTWff9JsjwkOWFltYy7rXuLnldYg5U4C7ipm3fj/bpYh+Bfr+RUWXGaUx8ol8IyWPeX8VrQ==
   dependencies:
-    "@fpk/core" "^0.1.6"
+    "@fpk/core" "^0.1.7"
     ramda "^0.27.0"
 
 "@oclif/command@^1", "@oclif/command@^1.5.13", "@oclif/command@^1.5.20":

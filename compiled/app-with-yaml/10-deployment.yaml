@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-with-yaml
+  namespace: app-with-yaml
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-with-yaml
+  template:
+    metadata:
+      labels:
+        app: app-with-yaml
+    spec:
+      containers:
+        - name: app-with-yaml
+          image: 'myorg/another-web-app:latest'
+          ports:
+            - containerPort: 3000
+          env: []
+          readinessProbe:
+            httpGet:
+              port: 3000
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 3000
+              path: /
+        - name: super-sidecar
+          image: 'myorg/sidecar:v1.0.0'
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 2
