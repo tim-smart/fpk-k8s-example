@@ -42,7 +42,7 @@ export function webWorkload({
 
   const service = K.serviceWithPort(name, { app: name }, containerPort);
 
-  const ingress = K.ingressFromRules(name, {
+  const ingress = K.ingressSimple(name, {
     backend: {
       serviceName: name,
       servicePort: containerPort,
