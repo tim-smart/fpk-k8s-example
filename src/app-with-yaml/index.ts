@@ -7,6 +7,7 @@ export default webWorkload({
   image: "myorg/another-web-app:latest",
   containerPort: 3000,
   env: {},
+  config: { key: "value" },
 
   host: "yaml.example.com",
 });

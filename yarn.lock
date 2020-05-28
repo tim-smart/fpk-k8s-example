@@ -24,11 +24,11 @@
     js-tokens "^4.0.0"
 
 "@fpk/cli@^0.1.3":
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.13.tgz#fe91c7459ea29e18c57a70027ccf1abf4c707cd3"
-  integrity sha512-wyBPehPD9j/+gtlVsQ0+pkUjSujXKG8l+KcBHm0hSNCYWKC9vC6wmBslQDZ6LeW6m2HMSMx0kiQ80yF5X0hZXg==
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.14.tgz#dbca219606c2e84dbc398f4983bc1c264bb8d399"
+  integrity sha512-1D/sSBnLT+KZr7d2kzHLHqip6kuuEX2MwvcoC47oFi3/o4mHzVBxcWmQDSnUXEM1i/DaAGGfhNztVSA+GFtbvw==
   dependencies:
-    "@fpk/core" "^0.1.11"
+    "@fpk/core" "^0.1.12"
     "@oclif/command" "^1"
     "@oclif/config" "^1"
     "@oclif/plugin-help" "^2"
@@ -39,10 +39,10 @@
     tslib "^1"
     typescript "^3.3"
 
-"@fpk/core@^0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.11.tgz#09b28e71b4291cb2299c1dfb565506ef20d79b87"
-  integrity sha512-EFfGWGUHkOhNlomnws5/5ks18dKncimkfHW80dDXyybMtONAiZwWnJr/Gq1orxsBqpbVE2TjseEl/Wla69gHBA==
+"@fpk/core@^0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.12.tgz#44e8c1e20f36cfde05f2455b7d21966270883761"
+  integrity sha512-r8GpQu0n1YTeS3VqTUZvjGGe7Dd4/U2ZTvJML2yYPLmZgQj2dkQgTIYZLQ7tlzuP+SrQKJvrjXStOM/aQm0/0Q==
   dependencies:
     fs-tree-diff "^2.0.1"
     js-yaml "^3.14.0"
@@ -50,11 +50,11 @@
     rxjs "^6.5.5"
 
 "@fpk/k8s@^0.1.1":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.1.22.tgz#c77d19a304f6b82dc6a14a10b214d20fc803e89d"
-  integrity sha512-3DVXB7MF0Hy8HBqYYLQxfCnKuujhT3GNgiklcNO7r3TO4nrUoMSgG48bEBed9zaCPHpWqC4fvlhRWCjbQAHmrQ==
+  version "0.1.25"
+  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.1.25.tgz#34670cd37d4b9845a6d8efc4f48eb6def4837223"
+  integrity sha512-XF/TpkWtQ3ZxA7yNnaUr9/vY+X/2xtGt93MgxvFpd7HVPgUarLEddsjMA5oyRy0o90vk48Df9NVNHZd3ek7dCw==
   dependencies:
-    "@fpk/core" "^0.1.11"
+    "@fpk/core" "^0.1.12"
     ramda "^0.27.0"
 
 "@oclif/command@^1", "@oclif/command@^1.5.13", "@oclif/command@^1.5.20":

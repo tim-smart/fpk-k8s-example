@@ -11,6 +11,7 @@ export default ({ webapp: { replicas, host } }: TDefaultContext) =>
     env: {
       FOO: "bar",
     },
+    config: { key: "value" },
 
     host,
   });

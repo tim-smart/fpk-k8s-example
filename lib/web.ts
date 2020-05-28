@@ -8,6 +8,7 @@ export interface IWebWorkloadOpts {
   image: string;
   containerPort: number;
   env: K.IEnvObject;
+  config: Record<string, string>;
 
   host: string;
 }
@@ -17,10 +18,21 @@ export function webWorkload({
   image,
   replicas,
   containerPort,
+  config,
   env,
   host,
 }: IWebWorkloadOpts) {
+  const configMap = K.configMap("env-config", config);
   const deployment = R.pipe(
+    R.always(
+      K.deploymentWithContainer({
+        name,
+        image,
+        replicas,
+        containerPort,
+        env,
+      }),
+    ),
     K.setDeploymentRollingUpdate({
       maxSurge: "25%",
       maxUnavailable: 2,
@@ -29,16 +41,15 @@ export function webWorkload({
       name: "super-sidecar",
       image: "myorg/sidecar:v1.0.0",
     }),
-    K.overContainer(name, R.pipe(K.setReadinessProbe(), K.setLivenessProbe())),
-  )(
-    K.deploymentWithContainer({
+    K.overContainer(
       name,
-      image,
-      replicas,
-      containerPort,
-      env,
-    }),
-  );
+      R.pipe(
+        K.appendEnvFromConfigMap(configMap),
+        K.setReadinessProbe(),
+        K.setLivenessProbe(),
+      ),
+    ),
+  )();
 
   const service = K.serviceWithPort(name, { app: name }, containerPort);
 
@@ -54,6 +65,7 @@ export function webWorkload({
   });
 
   return K.withNamespace(name)({
+    "10-env-config": configMap,
     "10-deployment": deployment,
     "10-service": service,
     "10-ingress": ingress,

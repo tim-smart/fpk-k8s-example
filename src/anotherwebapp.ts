@@ -9,6 +9,7 @@ export default ({ anotherwebapp: { host, replicas } }: TDefaultContext) =>
     image: "myorg/another-web-app:latest",
     containerPort: 3000,
     env: {},
+    config: { PORT: "3000" },
 
     host,
   });

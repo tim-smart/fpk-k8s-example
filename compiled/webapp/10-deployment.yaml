@@ -21,6 +21,9 @@ spec:
           env:
             - name: FOO
               value: bar
+          envFrom:
+            - configMapRef:
+                name: env-config
           readinessProbe:
             httpGet:
               port: 8080
