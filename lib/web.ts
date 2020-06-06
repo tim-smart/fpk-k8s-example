@@ -51,18 +51,13 @@ export function webWorkload({
     ),
   )();
 
-  const service = K.serviceWithPort(name, { app: name }, containerPort);
+  const service = K.serviceWithPorts(
+    name,
+    { app: name },
+    { http: containerPort },
+  );
 
-  const ingress = K.ingressSimple(name, {
-    backend: {
-      serviceName: name,
-      servicePort: containerPort,
-    },
-    tlsAcme: true,
-    tlsRedirect: true,
-    tlsSecretName: `${name}-tls`,
-    rules: [{ host }],
-  });
+  const ingress = K.ingressFromService(name, [host], service);
 
   return K.withNamespace(name)({
     "10-env-config": configMap,

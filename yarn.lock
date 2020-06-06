@@ -24,11 +24,11 @@
     js-tokens "^4.0.0"
 
 "@fpk/cli@^0.1.3":
-  version "0.1.14"
-  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.14.tgz#dbca219606c2e84dbc398f4983bc1c264bb8d399"
-  integrity sha512-1D/sSBnLT+KZr7d2kzHLHqip6kuuEX2MwvcoC47oFi3/o4mHzVBxcWmQDSnUXEM1i/DaAGGfhNztVSA+GFtbvw==
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.21.tgz#386ff058bfea42167e5c8d893343337a92e38c26"
+  integrity sha512-Mife1YCC+sPWhQQPrE1Q6x6krNIpbQCCdJY2AR6VkdT+qjQXthNJ69IBR/rgmmKScPXKr7Sh5ST8v8zEtCFq8Q==
   dependencies:
-    "@fpk/core" "^0.1.12"
+    "@fpk/core" "^0.1.18"
     "@oclif/command" "^1"
     "@oclif/config" "^1"
     "@oclif/plugin-help" "^2"
@@ -39,10 +39,10 @@
     tslib "^1"
     typescript "^3.3"
 
-"@fpk/core@^0.1.12":
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.12.tgz#44e8c1e20f36cfde05f2455b7d21966270883761"
-  integrity sha512-r8GpQu0n1YTeS3VqTUZvjGGe7Dd4/U2ZTvJML2yYPLmZgQj2dkQgTIYZLQ7tlzuP+SrQKJvrjXStOM/aQm0/0Q==
+"@fpk/core@^0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.18.tgz#c7354f819460290de730362884c3bf2797b2d87e"
+  integrity sha512-yuNSzMWnt2+IoQoTqIVnUce1pR5Se0oHMzKFy/xUF8RKasyCrgydriYM7y7gpvkUDchtW2eOW7NZrzq1t0K6pw==
   dependencies:
     fs-tree-diff "^2.0.1"
     js-yaml "^3.14.0"
@@ -50,11 +50,11 @@
     rxjs "^6.5.5"
 
 "@fpk/k8s@^0.1.1":
-  version "0.1.25"
-  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.1.25.tgz#34670cd37d4b9845a6d8efc4f48eb6def4837223"
-  integrity sha512-XF/TpkWtQ3ZxA7yNnaUr9/vY+X/2xtGt93MgxvFpd7HVPgUarLEddsjMA5oyRy0o90vk48Df9NVNHZd3ek7dCw==
+  version "0.1.38"
+  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.1.38.tgz#3bcb9ca27e955a344498ddd111bbd4bd3241b85e"
+  integrity sha512-f1EnQ0WTzKXpWAu0XkgUIYKNMk0KaFbiORqtFHwr++mmNyHnaJP1lBX9AqaYjz2fuXja4hv8UTwJ26ymEgVyNw==
   dependencies:
-    "@fpk/core" "^0.1.12"
+    "@fpk/core" "^0.1.18"
     ramda "^0.27.0"
 
 "@oclif/command@^1", "@oclif/command@^1.5.13", "@oclif/command@^1.5.20":
@@ -120,9 +120,9 @@
     wrap-ansi "^4.0.0"
 
 "@oclif/plugin-help@^3":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-3.0.1.tgz#21919bc6bef58eb045b80312dbb1d671ee7bba51"
-  integrity sha512-Q1OITeUBkkydPf6r5qX75KgE9capr1mNrfHtfD7gkVXmqoTndrbc++z4KfAYNf5nhTCY7N9l52sjbF6BrSGu9w==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-3.1.0.tgz#507ff8e9cabe734672b12d1ec0b79812d18c58a8"
+  integrity sha512-orSWpXGlJaX16eSjAtI8scA8QhrjQOaCSHodEx52t18JKbIVzG8jcngugyWAOB/V4jhPl0rdiVk9XFsaIIiG2g==
   dependencies:
     "@oclif/command" "^1.5.20"
     "@oclif/config" "^1.15.1"
@@ -586,9 +586,9 @@ object-assign@^4.1.0:
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
 opencollective-postinstall@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
-  integrity sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
+  integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
 
 p-limit@^2.2.0:
   version "2.3.0"
@@ -785,9 +785,9 @@ to-regex-range@^5.0.1:
     is-number "^7.0.0"
 
 ts-node@^8:
-  version "8.10.1"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.10.1.tgz#77da0366ff8afbe733596361d2df9a60fc9c9bd3"
-  integrity sha512-bdNz1L4ekHiJul6SHtZWs1ujEKERJnHs4HxN7rjTyyVOFf3HaJ6sLqe6aPG62XTzAB/63pKRh5jTSWL0D7bsvw==
+  version "8.10.2"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.10.2.tgz#eee03764633b1234ddd37f8db9ec10b75ec7fb8d"
+  integrity sha512-ISJJGgkIpDdBhWVu3jufsWpK3Rzo7bdiIXJjQc0ynKxVOVcg2oIrf2H2cejminGrptVc6q6/uynAHNCuWGbpVA==
   dependencies:
     arg "^4.1.0"
     diff "^4.0.1"
@@ -806,9 +806,9 @@ tslib@^1, tslib@^1.9.0, tslib@^1.9.3:
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
 
 typescript@^3.3, typescript@^3.9.3:
-  version "3.9.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.3.tgz#d3ac8883a97c26139e42df5e93eeece33d610b8a"
-  integrity sha512-D/wqnB2xzNFIcoBG9FG8cXRDjiqSTbG2wd8DMZeQyJlP1vfTkIxH4GKveWaEBYySKIg+USu+E+EDIR47SqnaMQ==
+  version "3.9.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
+  integrity sha512-hSAifV3k+i6lEoCJ2k6R2Z/rp/H3+8sdmcn5NrS3/3kE7+RyZXm9aqvxWqjEXHAd8b0pShatpcdMTvEdvAJltQ==
 
 universalify@^0.1.0:
   version "0.1.2"

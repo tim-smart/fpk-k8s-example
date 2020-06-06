@@ -7,5 +7,6 @@ spec:
   selector:
     app: another-web-app
   ports:
-    - port: 3000
+    - name: http
+      port: 3000
       targetPort: 3000
