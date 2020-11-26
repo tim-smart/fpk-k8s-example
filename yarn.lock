@@ -49,13 +49,24 @@
     ramda "^0.27.0"
     rxjs "^6.5.5"
 
-"@fpk/k8s@^0.1.1":
-  version "0.1.38"
-  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.1.38.tgz#3bcb9ca27e955a344498ddd111bbd4bd3241b85e"
-  integrity sha512-f1EnQ0WTzKXpWAu0XkgUIYKNMk0KaFbiORqtFHwr++mmNyHnaJP1lBX9AqaYjz2fuXja4hv8UTwJ26ymEgVyNw==
+"@fpk/core@^0.1.24":
+  version "0.1.24"
+  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.24.tgz#4e4bb5929b9c76acb706ae1ee044100c2b574873"
+  integrity sha512-qMvmlW60GlTwgiKAJFL83ebu2RAFKa2WufYziBeLvdsJBcbYwlf5qpz9ViIeVj86uxTMjazkxjlH6zJtm0Ndcg==
   dependencies:
-    "@fpk/core" "^0.1.18"
-    ramda "^0.27.0"
+    fs-tree-diff "^2.0.1"
+    glob-to-regexp "^0.4.1"
+    js-yaml "^3.14.0"
+    ramda "^0.27.1"
+    rxjs "^6.6.3"
+
+"@fpk/k8s@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.3.0.tgz#71e1c333dad60c0c0872553d86e6e0e0df41498b"
+  integrity sha512-GW7l1h9bxHC3JDtZIdlZhq8ZKRpLPZ+6vdZEHOVdid9HgG0VAG863Gfy9uWdWqpPxXMWAsAjZJ9gUwYzzFjSLQ==
+  dependencies:
+    "@fpk/core" "^0.1.24"
+    ramda "^0.27.1"
 
 "@oclif/command@^1", "@oclif/command@^1.5.13", "@oclif/command@^1.5.20":
   version "1.6.1"
@@ -400,6 +411,11 @@ glob-parent@~5.1.0:
   dependencies:
     is-glob "^4.0.1"
 
+glob-to-regexp@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
+  integrity sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==
+
 graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
@@ -665,6 +681,11 @@ ramda@^0.27.0:
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.0.tgz#915dc29865c0800bf3f69b8fd6c279898b59de43"
   integrity sha512-pVzZdDpWwWqEVVLshWUHjNwuVP7SfcmPraYuqocJp1yo2U1R7P+5QAfDhdItkuoGqIBnBYrtPp7rEPqDn9HlZA==
 
+ramda@^0.27.1:
+  version "0.27.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.1.tgz#66fc2df3ef873874ffc2da6aa8984658abacf5c9"
+  integrity sha512-PgIdVpn5y5Yns8vqb8FzBUEYn98V3xcPgawAkkgj0YJ0qDsnHCiNmZYfOGMgOvoB0eWFLpYbhxUR3mxfDIMvpw==
+
 readdirp@~3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-3.4.0.tgz#9fdccdf9e9155805449221ac645e8303ab5b9ada"
@@ -686,6 +707,13 @@ rxjs@^6.5.5:
   version "6.5.5"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
   integrity sha512-WfQI+1gohdf0Dai/Bbmk5L5ItH5tYqm3ki2c5GdWhKjalzjg93N3avFjVStyZZz+A2Em+ZxKH5bNghw9UeylGQ==
+  dependencies:
+    tslib "^1.9.0"
+
+rxjs@^6.6.3:
+  version "6.6.3"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
+  integrity sha512-trsQc+xYYXZ3urjOiJOuCOa5N3jAZ3eiSpQB5hIT8zGlL2QfnHLJ2r7GMkBGuIausdJN1OneaI6gQlsqNHHmZQ==
   dependencies:
     tslib "^1.9.0"
 

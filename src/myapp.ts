@@ -1,15 +1,16 @@
+import * as R from "ramda";
 import * as K from "@fpk/k8s";
 import { TDefaultContext } from "../contexts/default";
 
+const container = R.pipe(
+  () => K.containerWithPorts("myapp", "myimage", { http: 3000 }),
+  K.concatEnv({ FOO: "bar" }),
+)();
+
 export default ({ myapp }: TDefaultContext) =>
   K.withNamespace("myapp")({
-    "10-deployment": K.deploymentWithContainer({
-      name: "myapp",
-      image: "myimage",
-      replicas: myapp.replicas,
-      containerPort: 3000,
-      env: {
-        FOO: "bar",
-      },
-    }),
+    "10-deployment": R.pipe(
+      () => K.deploymentWithContainer(container),
+      K.setReplicas(myapp.replicas),
+    )(),
   });

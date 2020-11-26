@@ -23,16 +23,17 @@ export function webWorkload({
   host,
 }: IWebWorkloadOpts) {
   const configMap = K.configMap("env-config", config);
+  const container = R.pipe(
+    () => K.containerWithPort(name, image, containerPort),
+    K.concatEnv(env),
+    K.appendEnvFromConfigMap(configMap),
+    K.setReadinessProbe(),
+    K.setLivenessProbe(),
+  )();
+
   const deployment = R.pipe(
-    R.always(
-      K.deploymentWithContainer({
-        name,
-        image,
-        replicas,
-        containerPort,
-        env,
-      }),
-    ),
+    () => K.deploymentWithContainer(container),
+    K.setReplicas(replicas),
     K.setDeploymentRollingUpdate({
       maxSurge: "25%",
       maxUnavailable: 2,
@@ -41,14 +42,6 @@ export function webWorkload({
       name: "super-sidecar",
       image: "myorg/sidecar:v1.0.0",
     }),
-    K.overContainer(
-      name,
-      R.pipe(
-        K.appendEnvFromConfigMap(configMap),
-        K.setReadinessProbe(),
-        K.setLivenessProbe(),
-      ),
-    ),
   )();
 
   const service = K.serviceWithPorts(

@@ -18,6 +18,7 @@ spec:
           image: myimage
           ports:
             - containerPort: 3000
+              name: http
           env:
             - name: FOO
               value: bar
