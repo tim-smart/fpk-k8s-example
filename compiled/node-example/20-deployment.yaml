@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-example
+  namespace: node-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-example
+  template:
+    metadata:
+      labels:
+        app: node-example
+    spec:
+      containers:
+        - name: my-app
+          image: 'node:14-alpine'
+          command:
+            - node
+            - index.js
+            - '80'
+          workingDir: /var/lib/app
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: appdata-volume
+              mountPath: /var/lib/app
+      volumes:
+        - name: appdata-volume
+          configMap:
+            name: appdata

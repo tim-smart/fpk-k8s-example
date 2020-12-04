@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: app-ing
+  annotations:
+    kubernetes.io/tls-acme: 'true'
+    ingress.kubernetes.io/force-ssl-redirect: 'true'
+  namespace: node-example
+spec:
+  rules:
+    - host: app.example.com
+      http:
+        paths:
+          - backend:
+              serviceName: app-svc
+              servicePort: 80
+  tls:
+    - hosts:
+        - app.example.com
+      secretName: app-ing-tls

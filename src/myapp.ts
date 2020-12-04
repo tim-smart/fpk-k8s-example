@@ -10,7 +10,7 @@ const container = R.pipe(
 export default ({ myapp }: TDefaultContext) =>
   K.withNamespace("myapp")({
     "10-deployment": R.pipe(
-      () => K.deploymentWithContainer(container),
+      () => K.deploymentWithContainer("mydeploy", container),
       K.setReplicas(myapp.replicas),
     )(),
   });

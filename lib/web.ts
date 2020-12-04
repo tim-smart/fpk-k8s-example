@@ -32,7 +32,7 @@ export function webWorkload({
   )();
 
   const deployment = R.pipe(
-    () => K.deploymentWithContainer(container),
+    () => K.deploymentWithContainer(name, container),
     K.setReplicas(replicas),
     K.setDeploymentRollingUpdate({
       maxSurge: "25%",
