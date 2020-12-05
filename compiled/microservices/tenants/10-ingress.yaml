@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: tenants
+  annotations:
+    kubernetes.io/tls-acme: 'true'
+    ingress.kubernetes.io/force-ssl-redirect: 'true'
+  namespace: tenants
+spec:
+  rules:
+    - host: tenants.example.com
+      http:
+        paths:
+          - backend:
+              serviceName: tenants
+              servicePort: 3000
+  tls:
+    - hosts:
+        - tenants.example.com
+      secretName: tenants-tls

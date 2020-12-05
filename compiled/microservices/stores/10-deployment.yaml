@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stores
+  namespace: stores
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: stores
+  template:
+    metadata:
+      labels:
+        app: stores
+    spec:
+      containers:
+        - name: stores
+          image: 'myorg/stores:1.2.0'
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: '3000'
+            - name: DATABASE_NAME
+              value: stores_prod
+          envFrom:
+            - configMapRef:
+                name: env-config
+          readinessProbe:
+            httpGet:
+              port: 3000
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 3000
+              path: /
+        - name: super-sidecar
+          image: 'myorg/sidecar:v1.0.0'
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 2

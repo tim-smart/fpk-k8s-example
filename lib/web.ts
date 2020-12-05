@@ -8,7 +8,7 @@ export interface IWebWorkloadOpts {
   image: string;
   containerPort: number;
   env: K.IEnvObject;
-  config: Record<string, string>;
+  config?: Record<string, string>;
 
   host: string;
 }
@@ -18,7 +18,7 @@ export function webWorkload({
   image,
   replicas,
   containerPort,
-  config,
+  config = {},
   env,
   host,
 }: IWebWorkloadOpts) {
@@ -52,10 +52,10 @@ export function webWorkload({
 
   const ingress = K.ingressFromService(name, [host], service);
 
-  return K.withNamespace(name)({
-    "10-env-config": configMap,
-    "10-deployment": deployment,
-    "10-service": service,
-    "10-ingress": ingress,
-  });
+  return {
+    configMap,
+    deployment,
+    service,
+    ingress,
+  };
 }

@@ -52,9 +52,9 @@
     rxjs "^7.0.0-beta.8"
 
 "@fpk/k8s@^0.4.0":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.4.1.tgz#2a7638ac78328ad4527b1c3b9329f9d67ad3c04f"
-  integrity sha512-6YHLzekfq2IAyapqX/YjkMgaxgUK4a71Ily2Q8d+Je6+gdLnjvs7+0a7yE8uy5OE5hjDePZ9fx4eGuQiWt9lCQ==
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.4.2.tgz#eb99a13c7861428d25fd672f3fc5f080cfae21de"
+  integrity sha512-6L0zIm4S/odTjOZl2huqDdJ3EeqL+TTIB1GJycmpp1aJ366o2+5DA0AKg+8SbBeEaRkXj0+TsXnHibEkFp7qXg==
   dependencies:
     "@fpk/core" "^0.1.29"
     ramda "^0.27.1"

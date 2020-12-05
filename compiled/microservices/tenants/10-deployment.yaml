@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tenants
+  namespace: tenants
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: tenants
+  template:
+    metadata:
+      labels:
+        app: tenants
+    spec:
+      containers:
+        - name: tenants
+          image: 'myorg/tenants:1.5.0'
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: '3000'
+            - name: DATABASE_NAME
+              value: tenants_prod
+          envFrom:
+            - configMapRef:
+                name: env-config
+          readinessProbe:
+            httpGet:
+              port: 3000
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 3000
+              path: /
+        - name: super-sidecar
+          image: 'myorg/sidecar:v1.0.0'
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 2
