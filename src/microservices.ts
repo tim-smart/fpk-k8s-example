@@ -1,5 +1,7 @@
 import { microservice } from "../lib/microservice";
 import * as K from "@fpk/k8s";
+import * as Rx from "rxjs";
+import * as RxOp from "rxjs/operators";
 
 interface IService {
   name: string;
@@ -25,30 +27,27 @@ const services: IService[] = [
   },
 ];
 
-export default async () => {
-  let config = {};
+const config$ = Rx.from(services).pipe(
+  RxOp.flatMap(({ name, version, replicas }) =>
+    Rx.of(
+      microservice({
+        name,
+        image: `myorg/${name}:${version}`,
+        replicas,
+        env: {
+          DATABASE_NAME: `${name}_prod`,
+        },
+      }),
+    ).pipe(
+      RxOp.map(({ deployment, service, ingress }) => ({
+        [`${name}/10-deployment`]: deployment,
+        [`${name}/10-service`]: service,
+        [`${name}/10-ingress`]: ingress,
+      })),
+      RxOp.flatMap(K.withNamespace(name, `${name}/00-namespace`)),
+    ),
+  ),
+  RxOp.reduce((acc, config) => ({ ...acc, ...config })),
+);
 
-  for (const { name, version, replicas } of services) {
-    const { deployment, service, ingress } = microservice({
-      name,
-      image: `myorg/${name}:${version}`,
-      replicas,
-      env: {
-        DATABASE_NAME: `${name}_prod`,
-      },
-    });
-
-    const serviceConfig = await K.withNamespace(
-      name,
-      `${name}/00-namespace`,
-    )({
-      [`${name}/10-deployment`]: deployment,
-      [`${name}/10-service`]: service,
-      [`${name}/10-ingress`]: ingress,
-    });
-
-    config = { ...config, ...serviceConfig };
-  }
-
-  return config;
-};
+export default Rx.lastValueFrom(config$);
