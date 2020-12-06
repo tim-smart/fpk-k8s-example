@@ -24,11 +24,11 @@
     js-tokens "^4.0.0"
 
 "@fpk/cli@^0.1.34":
-  version "0.1.34"
-  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.34.tgz#dcd292633f21c5baf8811c0b721ea9e172cf78f8"
-  integrity sha512-asA9m3IyA1I3CsPOa6hH1rlrqScM2ovstOw/UFTwZjRaOLCvNs/1Nj7cY/tCw1BWGznb27mTI7GjvcyTda7JEA==
+  version "0.1.37"
+  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.37.tgz#1a27aef92e7bdcdd0d4174a0837e5bcf024f597f"
+  integrity sha512-4L/OioNOcx+T0MRxSAFUHByOKAuJsbJblqlFFg7BzSx/XLbe/QHjYLXGDmtwhHur3POrftWu/HLQNBkVVA2nVQ==
   dependencies:
-    "@fpk/core" "^0.1.29"
+    "@fpk/core" "^0.1.32"
     "@oclif/command" "^1.8.0"
     "@oclif/config" "^1.17.0"
     "@oclif/plugin-help" "^3.2.0"
@@ -39,10 +39,10 @@
     tslib "^2.0.3"
     typescript "^4.0.3"
 
-"@fpk/core@^0.1.29":
-  version "0.1.29"
-  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.29.tgz#431f964fc0e1d95591fc2075c0e1e75739250aa4"
-  integrity sha512-opkrGTi8/wVkdPlP7SF0d86P1SF0oGM1uROogTXfFPNcZZmSMEeRhUXD2gQtxQbmuWc2ReBFyd5l+yDtYSNO+A==
+"@fpk/core@^0.1.32":
+  version "0.1.32"
+  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.32.tgz#88fe6f5344eb757f808184eac04f706a8bfcf716"
+  integrity sha512-XCgBGGju+xlrTnnRAjQRMFwEKpCZdtmSjx+zz0yDuhUwNeDonQFa7OiF6LGnP3ASJbBubqqsJTs1KAFT0ToWPQ==
   dependencies:
     fs-tree-diff "^2.0.1"
     glob-to-regexp "^0.4.1"
@@ -52,11 +52,11 @@
     rxjs "^7.0.0-beta.8"
 
 "@fpk/k8s@^0.4.0":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.4.2.tgz#eb99a13c7861428d25fd672f3fc5f080cfae21de"
-  integrity sha512-6L0zIm4S/odTjOZl2huqDdJ3EeqL+TTIB1GJycmpp1aJ366o2+5DA0AKg+8SbBeEaRkXj0+TsXnHibEkFp7qXg==
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.4.5.tgz#7be09e6dfb2099b9ece1ef110319f762c88e7d20"
+  integrity sha512-gJmNe6AdLLweLNcAAkXMimgu3fiAbF+MtD/BPtg0NVwylC65aWCmyFftPCCaw4vOQ/03uENim38H8mETV3MaSA==
   dependencies:
-    "@fpk/core" "^0.1.29"
+    "@fpk/core" "^0.1.32"
     ramda "^0.27.1"
 
 "@node-rs/helper@^0.4.0":
@@ -544,9 +544,9 @@ heimdalljs@^0.2.6:
     rsvp "~3.2.1"
 
 husky@^4.2.5:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-4.3.0.tgz#0b2ec1d66424e9219d359e26a51c58ec5278f0de"
-  integrity sha512-tTMeLCLqSBqnflBZnlVDhpaIMucSGaYyX6855jM4AguGeWCeSzNdb1mfyWduTZ3pe3SJVvVWGL0jO1iKZVPfTA==
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-4.3.4.tgz#676275a10ec5be2e893bd6ff71113bb829cc1f5b"
+  integrity sha512-wykHsss5kQtmbFrjQv0R7YyW1uFd7fv7gT1sA54potoDYmOTENJtBC/X1/AyoSAi1obp8CiGODOIdOGnPxSmFg==
   dependencies:
     chalk "^4.0.0"
     ci-info "^2.0.0"
