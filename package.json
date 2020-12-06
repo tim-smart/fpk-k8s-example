@@ -11,9 +11,8 @@
   "dependencies": {
     "@fpk/cli": "^0.1.34",
     "@fpk/k8s": "^0.4.0",
-    "@types/ramda": "^0.27.6",
     "kubernetes-types": "^1.17.0-beta.1",
-    "ramda": "^0.27.0",
+    "remeda": "^0.0.27",
     "rxjs": "^7.0.0-beta.8",
     "typescript": "^3.9.3"
   },

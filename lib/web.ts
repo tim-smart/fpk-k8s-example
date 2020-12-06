@@ -1,5 +1,5 @@
 import * as K from "@fpk/k8s";
-import * as R from "ramda";
+import * as R from "remeda";
 
 export interface IWebWorkloadOpts {
   name: string;
@@ -24,15 +24,15 @@ export function webWorkload({
 }: IWebWorkloadOpts) {
   const configMap = K.configMap("env-config", config);
   const container = R.pipe(
-    () => K.containerWithPort(name, image, containerPort),
+    K.containerWithPort(name, image, containerPort),
     K.concatEnv(env),
     K.appendEnvFromConfigMap(configMap),
     K.setReadinessProbe(),
     K.setLivenessProbe(),
-  )();
+  );
 
   const deployment = R.pipe(
-    () => K.deploymentWithContainer(name, container),
+    K.deploymentWithContainer(name, container),
     K.setReplicas(replicas),
     K.setDeploymentRollingUpdate({
       maxSurge: "25%",
@@ -42,7 +42,7 @@ export function webWorkload({
       name: "super-sidecar",
       image: "myorg/sidecar:v1.0.0",
     }),
-  )();
+  );
 
   const service = K.serviceWithPorts(
     name,

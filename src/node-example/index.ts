@@ -1,5 +1,5 @@
 import * as K from "@fpk/k8s";
-import * as R from "ramda";
+import * as R from "remeda";
 import * as path from "path";
 
 const name = "node-example";
@@ -14,12 +14,12 @@ const container = K.containerWithPort("my-app", "node:14-alpine", 80, {
   workingDir: appPath,
 });
 const deployment = R.pipe(
-  () => K.deploymentWithContainer(name, container),
+  K.deploymentWithContainer(name, container),
   K.appendVolumeAndMount({
     volume,
     mountPath: appPath,
   }),
-)();
+);
 
 const service = K.serviceFromPod("app-svc", deployment);
 const ingress = K.ingressFromService("app-ing", ["app.example.com"], service);
