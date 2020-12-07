@@ -1,0 +1,10 @@
+{
+  "basic-example": {
+    "replicas": 5
+  },
+
+  "helper-example": {
+    "replicas": 10,
+    "host": "webapp.example.com"
+  }
+}

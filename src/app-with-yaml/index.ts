@@ -1,6 +1,11 @@
 import * as K from "@fpk/k8s";
 import { webWorkload } from "../../lib/web";
 
+// This example has standard yaml files living alongside our fpk configuration.
+//
+// It also uses the index file pattern, which prevents fpk from creating a
+// seperate "index" sub-directory.
+
 const { configMap, deployment, service, ingress } = webWorkload({
   name: "app-with-yaml",
   replicas: 2,

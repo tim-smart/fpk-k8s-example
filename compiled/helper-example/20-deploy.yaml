@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mywebapp
+  name: helper-example
   namespace: mywebapp
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: mywebapp
+      app: helper-example
   template:
     metadata:
       labels:
-        app: mywebapp
+        app: helper-example
     spec:
       containers:
-        - name: mywebapp
+        - name: helper-example
           image: 'myorg/myappimage:latest'
           ports:
             - containerPort: 8080

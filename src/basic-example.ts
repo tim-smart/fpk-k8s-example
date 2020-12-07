@@ -1,6 +1,6 @@
 import * as R from "remeda";
 import * as K from "@fpk/k8s";
-import { TDefaultContext } from "../contexts/default";
+import { TContext } from "../contexts/types";
 
 const container = R.pipe(
   K.containerWithPorts("myapp", "myimage", { http: 3000 }),
@@ -12,7 +12,7 @@ const deployment = (replicas: number) =>
     K.setReplicas(replicas),
   );
 
-export default ({ myapp }: TDefaultContext) =>
+export default ({ "basic-example": { replicas } }: TContext) =>
   K.withNamespace("myapp")({
-    "10-deployment": deployment(myapp.replicas),
+    "10-deployment": deployment(replicas),
   });

@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: mywebapp
+  name: helper-example
   annotations:
     kubernetes.io/tls-acme: 'true'
     ingress.kubernetes.io/force-ssl-redirect: 'true'
@@ -12,9 +12,9 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: mywebapp
+              serviceName: helper-example
               servicePort: 8080
   tls:
     - hosts:
         - webapp.example.com
-      secretName: mywebapp-tls
+      secretName: helper-example-tls

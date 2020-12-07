@@ -3,7 +3,9 @@
     "target": "ESNext",
     "lib": ["ESNext"],
     "strict": true,
-    "module": "CommonJS"
+    "module": "CommonJS",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": ["contexts/**/*", "lib/**/*", "src/**/*"]
 }

@@ -3,6 +3,11 @@ import * as K from "@fpk/k8s";
 import * as Rx from "rxjs";
 import * as RxOp from "rxjs/operators";
 
+// This example shows you how you can use pre-existing javascript libraries to
+// build configuration.
+//
+// This file will generate 3 different "apps" using a common structure.
+
 interface IService {
   name: string;
   version: string;
