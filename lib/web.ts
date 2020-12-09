@@ -24,11 +24,11 @@ export function webWorkload({
 }: IWebWorkloadOpts) {
   const configMap = K.configMap("env-config", config);
   const container = R.pipe(
-    K.containerWithPort(name, image, containerPort),
+    K.containerWithPorts(name, image, { http: containerPort }),
     K.concatEnv(env),
     K.appendEnvFromConfigMap(configMap),
     K.setReadinessProbe(),
-    K.setLivenessProbe(),
+    K.setLivenessProbe()
   );
 
   const deployment = R.pipe(
@@ -41,15 +41,10 @@ export function webWorkload({
     K.appendContainer({
       name: "super-sidecar",
       image: "myorg/sidecar:v1.0.0",
-    }),
+    })
   );
 
-  const service = K.serviceWithPorts(
-    name,
-    { app: name },
-    { http: containerPort },
-  );
-
+  const service = K.serviceFromPod(name, deployment);
   const ingress = K.ingressFromService(name, [host], service);
 
   return {

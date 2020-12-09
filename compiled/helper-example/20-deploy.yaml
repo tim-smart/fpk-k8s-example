@@ -18,6 +18,7 @@ spec:
           image: 'myorg/myappimage:latest'
           ports:
             - containerPort: 8080
+              name: http
           env:
             - name: FOO
               value: bar

@@ -24,11 +24,11 @@
     js-tokens "^4.0.0"
 
 "@fpk/cli@^0.1.34":
-  version "0.1.37"
-  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.37.tgz#1a27aef92e7bdcdd0d4174a0837e5bcf024f597f"
-  integrity sha512-4L/OioNOcx+T0MRxSAFUHByOKAuJsbJblqlFFg7BzSx/XLbe/QHjYLXGDmtwhHur3POrftWu/HLQNBkVVA2nVQ==
+  version "0.1.39"
+  resolved "https://registry.yarnpkg.com/@fpk/cli/-/cli-0.1.39.tgz#9e7e6e9e0d1e630968d9ccb877be8df7d57347d8"
+  integrity sha512-nMfR6BSvA+luBu8DU7T3+oNSmDwN34cwUWctJf0FKJp6repkl965nWHtH8M8YHbk09tXj99JXI8UMNzFuyvQ7Q==
   dependencies:
-    "@fpk/core" "^0.1.32"
+    "@fpk/core" "^0.1.33"
     "@oclif/command" "^1.8.0"
     "@oclif/config" "^1.17.0"
     "@oclif/plugin-help" "^3.2.0"
@@ -39,10 +39,10 @@
     tslib "^2.0.3"
     typescript "^4.0.3"
 
-"@fpk/core@^0.1.32":
-  version "0.1.32"
-  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.32.tgz#88fe6f5344eb757f808184eac04f706a8bfcf716"
-  integrity sha512-XCgBGGju+xlrTnnRAjQRMFwEKpCZdtmSjx+zz0yDuhUwNeDonQFa7OiF6LGnP3ASJbBubqqsJTs1KAFT0ToWPQ==
+"@fpk/core@^0.1.33":
+  version "0.1.33"
+  resolved "https://registry.yarnpkg.com/@fpk/core/-/core-0.1.33.tgz#6c5b7d0b0d96ab5b00b3809d567f6255906470b0"
+  integrity sha512-WfkWu5SM2rB7/cJ/Ph9S/tJW9Ydgu1qeqkt/kCmRelOAz65qDnBhMLkmOcvd9GPC0r3wnWcd1RdALRRnB2jy2w==
   dependencies:
     fs-tree-diff "^2.0.1"
     glob-to-regexp "^0.4.1"
@@ -52,11 +52,11 @@
     rxjs "^7.0.0-beta.8"
 
 "@fpk/k8s@^0.4.0":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.4.5.tgz#7be09e6dfb2099b9ece1ef110319f762c88e7d20"
-  integrity sha512-gJmNe6AdLLweLNcAAkXMimgu3fiAbF+MtD/BPtg0NVwylC65aWCmyFftPCCaw4vOQ/03uENim38H8mETV3MaSA==
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/@fpk/k8s/-/k8s-0.4.6.tgz#9cafacbcf5e07a864733abad0a18717578231333"
+  integrity sha512-5y1Vhyzhak5GS6cp9qxiVf70/36kZob0iSbA2pSsCzWFg10duL0njIB9LZnt78DXFmwmUJs18JOII+GK0V/FHg==
   dependencies:
-    "@fpk/core" "^0.1.32"
+    "@fpk/core" "^0.1.33"
     ramda "^0.27.1"
 
 "@node-rs/helper@^0.4.0":
@@ -204,21 +204,14 @@
     "@swc/core-win32" "^1.2.40"
 
 "@types/node@^14.14.10":
-  version "14.14.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.10.tgz#5958a82e41863cfc71f2307b3748e3491ba03785"
-  integrity sha512-J32dgx2hw8vXrSbu4ZlVhn1Nm3GbeCFNw2FWL8S5QKucHGY0cyNwjdQdO+KMBZ4wpmC7KhLCiNsdk1RFRIYUQQ==
+  version "14.14.11"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.11.tgz#fc25a4248a5e8d0837019b1d170146d07334abe0"
+  integrity sha512-BJ97wAUuU3NUiUCp44xzUFquQEvnk1wu7q4CMEUYKJWjdkr0YWYDsm4RFtAvxYsNjLsKcrFt6RvK8r+mnzMbEQ==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
-
-"@types/ramda@^0.27.6":
-  version "0.27.32"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.32.tgz#4f62ff4fc3a41dc32dd9df3cde53861b6ee69e6f"
-  integrity sha512-vdwZcWC+hlTxB//LZQLS1+VEdArImGI4yVKUpeqB8b9mBXgDFXCuQoOt8spQbi8fTyNLOdqRv6liSm2ckxWLog==
-  dependencies:
-    ts-toolbelt "^6.15.1"
 
 "@types/symlink-or-copy@^1.2.0":
   version "1.2.0"
@@ -544,9 +537,9 @@ heimdalljs@^0.2.6:
     rsvp "~3.2.1"
 
 husky@^4.2.5:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-4.3.4.tgz#676275a10ec5be2e893bd6ff71113bb829cc1f5b"
-  integrity sha512-wykHsss5kQtmbFrjQv0R7YyW1uFd7fv7gT1sA54potoDYmOTENJtBC/X1/AyoSAi1obp8CiGODOIdOGnPxSmFg==
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-4.3.5.tgz#ab8d2a0eb6b62fef2853ee3d442c927d89290902"
+  integrity sha512-E5S/1HMoDDaqsH8kDF5zeKEQbYqe3wL9zJDyqyYqc8I4vHBtAoxkDBGXox0lZ9RI+k5GyB728vZdmnM4bYap+g==
   dependencies:
     chalk "^4.0.0"
     ci-info "^2.0.0"
@@ -578,9 +571,9 @@ indent-string@^4.0.0:
   integrity sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==
 
 ini@^1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-  integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.6.tgz#f1c46a2a93a253e7b3905115e74d527cd23061a1"
+  integrity sha512-IZUoxEjNjubzrmvzZU4lKP7OnYmX72XRl3sqkfJhBKweKi5rnGi5+IUdlj/H1M+Ip5JQ1WzaDMOBRY90Ajc5jg==
 
 is-arrayish@^0.2.1:
   version "0.2.1"
@@ -639,9 +632,9 @@ js-tokens@^4.0.0:
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
 js-yaml@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
-  integrity sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
+  integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -860,9 +853,9 @@ run-parallel@^1.1.9:
   integrity sha512-zb/1OuZ6flOlH6tQyMPUrE3x3Ulxjlo9WIVXR4yVYi4H9UXQaeIsPbLn2R3O3vQCnDKkAl2qHiuocKKX4Tz/Sw==
 
 rxjs@^7.0.0-beta.8:
-  version "7.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.0.0-beta.8.tgz#dd5df421175a3c5cb5f7c038a01659b8cbc469cc"
-  integrity sha512-rnLwH1WJR67m7p5m+KQNqXd1A+PO/WLZZMd1JuzIRm2AOmhJttBGyDiyanky65rHaYzhEztU1QPak68hm+R4qA==
+  version "7.0.0-beta.9"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.0.0-beta.9.tgz#e6b4449512b04d12e8c710ac5c9213f2946c7797"
+  integrity sha512-yYP9+auIvtsmXRrrs86bFCryGFsrOBfHeXxQsgcqAAwNMinzT2ManfrmEhDQYm507cjIRIJ68FY39C62kqrdoA==
   dependencies:
     tslib "^1.9.0"
 
@@ -962,11 +955,6 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
-
-ts-toolbelt@^6.15.1:
-  version "6.15.5"
-  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-6.15.5.tgz#cb3b43ed725cb63644782c64fbcad7d8f28c0a83"
-  integrity sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==
 
 tslib@^1.9.0, tslib@^1.9.3:
   version "1.14.1"

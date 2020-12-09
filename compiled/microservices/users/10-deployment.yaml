@@ -18,6 +18,7 @@ spec:
           image: 'myorg/users:latest'
           ports:
             - containerPort: 3000
+              name: http
           env:
             - name: PORT
               value: '3000'
